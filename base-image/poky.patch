@@ -1,0 +1,12 @@
+diff --git a/meta/recipes-support/gnutls/gnutls_3.6.7.bb b/meta/recipes-support/gnutls/gnutls_3.6.7.bb
+index e05dc2b57d..baf1add99c 100644
+--- a/meta/recipes-support/gnutls/gnutls_3.6.7.bb
++++ b/meta/recipes-support/gnutls/gnutls_3.6.7.bb
+@@ -37,6 +37,7 @@ PACKAGECONFIG[p11-kit] = "--with-p11-kit,--without-p11-kit,p11-kit"
+ PACKAGECONFIG[tpm] = "--with-tpm,--without-tpm,trousers"
+ 
+ EXTRA_OECONF = " \
++    --with-default-trust-store-dir=/etc/ssl/certs \
+     --enable-doc \
+     --disable-libdane \
+     --disable-guile \

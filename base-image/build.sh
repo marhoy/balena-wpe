@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Apply some patches
+patch -Np1 -r- -d poky < poky.patch
+patch -Np1 -r- -d meta-webkit < meta-webkit.patch
+
 set -o errexit
 
 export MACHINE=${MACHINE:-raspberrypi3}
